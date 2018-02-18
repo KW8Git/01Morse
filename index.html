@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--浏览器自适应设置-->
+		<!--<meta name="viewport" content="width=device-width,maximun-scale=1.0,minimun-scale=1.0,user-scalable=no" />-->
+		<meta charset="UTF-8">
+		<title>Morse</title>
+		
+		<link rel="stylesheet" href="css/base.css" />
+		<script type="text/javascript" src="js/morseData.js"></script>
+		<script type="text/javascript" src="js/base.js" defer="true"></script>
+		<script type="text/javascript" src="js/test.js" defer="defer"></script>
+		<script type="text/javascript" src="js/indexPage.js" defer></script>
+		
+		
+	</head>
+	<body>
+		<header id="header-box"><span>ABCDEFGHIJKLMNOPQRSTUVWXYZ&copy;</span></header>
+		<div id="max-big-box">
+			<div id="div-logo">
+				<img id="img-logo" alt="loge" src="imgs/MorseForJun.png" />
+			</div>
+			<div id="div-search">
+				<input id="inp-morse" type="text" autofocus="autofocus" placeholder="这里输入Morse Code哦！" />
+				<button id="butt-search" type="button" onclick="buttSearchOnClick()">翻译</button>
+			</div>
+			<div id="div-result">
+				<span>Res:</span>
+				<p id="p-resultShow">翻译结果会出现在这里哦！</p>
+			</div>
+			<div id="div-tip">
+				<span>Tips:</span>
+				<p id="p-tips">
+					1.请在英文输入法环境中输入Morse。<br />
+					2.两个完整的Morse之间请至少保持一个空格的间隔。<br />
+					3.因为这是私密通信，so这里不提供Morse密码本。<br />
+					4.匹配不到的Morse Code会做删除线标记后输出。<br />
+				</p>
+			</div>
+		</div>
+		<div id="div-yanhua">
+			
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
