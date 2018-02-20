@@ -33,7 +33,7 @@ div#div-search{
 	display: table;
 	
 	position: relative;
-	left: 15%;
+	left: 10%;
 }
 div#div-search input#inp-morse{
 	width: 600px;
@@ -42,11 +42,11 @@ div#div-search input#inp-morse{
 	/*margin-right: 0;*/
 	background-color: #80D9FD;
 	border-color: #6F0C45;
-	border-radius: 15px 0 0 15px;
+	/*border-radius: 15px 0 0 15px;*/
 	padding-left: 21px;
 	/*outline-color: #00B5F;*/
 	}
-div#div-search button#butt-search{
+div#div-search button#butt-searchP{
 	/*position: relative;
 	left: -28px;
 	bottom: 0;*/
@@ -59,6 +59,16 @@ div#div-search button#butt-search{
 	background-color: #9AADBE;
 	border-color: #6F0C45;
 	border-radius: 0 15px 15px 0;
+}
+div#div-search button#butt-searchM{
+	width: 85px;
+	height: 81px;
+	font-size: 30px;
+	text-align: center;
+	border-right: none;
+	background-color: #9AADBE;
+	border-color: #6F0C45;
+	border-radius: 15px 0 0 15px;
 }
 div#div-result{
 	margin-top: 54px;

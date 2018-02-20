@@ -1,8 +1,14 @@
 
-function buttSearchOnClick(){
+function buttSearchOnClickP(){
 	var elemInputTag = document.getElementById("inp-morse");
 	var elemIputValue = elemInputTag.value;
-	var result = morsiefToMings(elemIputValue);
+	var result = morsvefToMings(elemIputValue);
+	resultShow(result);
+}
+function buttSearchOnClickM(){
+	var elemInputTag = document.getElementById("inp-morse");
+	var elemIputValue = elemInputTag.value;
+	var result = mingsToMorsvef(elemIputValue);
 	resultShow(result);
 }
 /**
