@@ -79,10 +79,14 @@ div#div-result span{
 	font-size: 36px;
 }
 div#div-result p#p-resultShow{
+	width: 621px;
 	font-size: 35px;
 	color: #6F0C45;
-	padding-left: 135px;
-	padding-right: 135px;
+	padding-left: 178px;
+	/*padding-left: 135px;*/
+	/*padding-right: 135px;*/
+	/*-ms-word-break: break-all;
+	word-break: break-all;*/
 }
 div#div-tip{
 	width: 85%;

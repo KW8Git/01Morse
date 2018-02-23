@@ -21,7 +21,8 @@ function morsvefToMings(str){
 		var arraySplits = str.split(/[0-9]/);
 		var strMing = "";
 		for(arr in arraySplits){
-			strMing = strMing + mToMing(arraySplits[arr]) + arrNums[arr];//最后要把数字加上
+			//最后要把数字加上,并加上一个空格进行分隔，这样文本就不会溢出，导致布局崩溃。我也不知道为什么，反正这样做很有效。
+			strMing = strMing + mToMing(arraySplits[arr]) + arrNums[arr] + " ";//最后要把数字加上,并加上一个空格进行分隔，这样文本就不会溢出，导致布局崩溃。我也不知道为什么，反正这样做很有效。
 		}
 		return strMing.split(/undefined/)[0];
 	}else if(1){
@@ -75,8 +76,11 @@ function mToMing(str){
 					break;
 				}
 			}
-			if(strSaveMing == listenerStrSaveMing){
-				strSaveMing = strSaveMing + arrSplits[arr1].strike();
+			if(strSaveMing == listenerStrSaveMing){//对匹配不到的字符进行处理
+				var arrStrSplits = arrSplits[arr1].split("");
+				for(var temp=0;temp<arrStrSplits.length;temp++){
+					strSaveMing = strSaveMing + arrStrSplits[temp].strike() + " ";					
+				}
 			}
 			listenerStrSaveMing = strSaveMing;
 		}
