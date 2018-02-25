@@ -1,4 +1,4 @@
-var str = "   acb v j d k ";
+//var str = "   acb v j d k ";
 //alert(str.trim());
 //alert(str.split(""));
 //alert(str.split("")[0]==null);//false

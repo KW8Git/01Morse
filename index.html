@@ -12,7 +12,33 @@
 		<script type="text/javascript" src="js/test.js" defer="defer"></script>
 		<script type="text/javascript" src="js/indexPage.js" defer></script>
 		
-		
+		<!--snow-->
+		<style>
+			body{
+				/*background-image:url('imgs/snow_bk.jpg');*/
+				/*background-size:cover;*/
+				/*background-repeat: no-repeat;*/
+				/*background-color:#222;*/
+				/*position: relative;*/
+				/*width:100%;*/
+				/*height: 100%;*/
+			}
+			/*将canvas雪花定位到原点并浮起来到上层*//*设置层级关系*/
+			canvas{
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -2;
+			}
+			header#header-box,div#max-big-box{
+				position: absolute;
+				z-index: 1;
+			}
+		</style>
+		<script src="js/ThreeCanvas.js"></script>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Snow.js"></script>
+		<script src="js/snowFall.js"></script>
 	</head>
 	<body>
 		<header id="header-box"><span>ABCDEFGHIJKLMNOPQRSTUVWXYZ&copy;</span></header>
@@ -42,9 +68,27 @@
 				</p>
 			</div>
 		</div>
-		<div id="div-yanhua">
-			
-		</div>
+		<!--snow-->
+		<script>
+			$.snowFall({
+				//创建粒子数量，密度
+				particleNo: 77,
+				//粒子下拉速度
+				particleSpeed:30,
+				//粒子在垂直（Y轴）方向运动范围
+				particleY_Range:1300,
+				//粒子在垂直（X轴）方向运动范围
+				particleX_Range:1000,
+				//是否绑定鼠标事件
+			    bindMouse: false,
+			    //相机离Z轴原点距离
+			    zIndex:600,
+			  //摄像机视野角度
+			    angle:55,
+			    wind_weight:1
+				});
+		</script>
+		<!--canvas为代码自动生成，在body最后-->
 	</body>
 </html>
 
