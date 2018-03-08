@@ -60,9 +60,9 @@ div#div-search button#butt-searchP{
 	top: -16px;
 
 	width: 85px;
-	height: 81px;
+	height: 88px;
 	font-size: 27px;
-	/*font-weight: bold;*/
+	font-weight: bold;
 	text-align: center;
 	border-left: none;
 	background-color: #9AADBE;
@@ -74,8 +74,9 @@ div#div-search button#butt-searchM{
 	top: -16px;
 	
 	width: 85px;
-	height: 81px;
+	height: 88px;
 	font-size: 27px;
+	font-weight: bold;
 	/*font-weight: bold;*/
 	text-align: center;
 	border-right: none;
@@ -100,6 +101,17 @@ div#div-result p#p-resultShow{
 	/*padding-right: 135px;*/
 	/*-ms-word-break: break-all;
 	word-break: break-all;*/
+}
+div#div-result .btn{
+	width: 80px;
+	height: 88px;
+	border: none;
+	margin-top: 50px;
+	background-color: rgba(128,217,253,0);
+}
+div#div-result img#img-copy{
+	width: inherit;
+	height: inherit;
 }
 div#div-tip{
 	width: 85%;

@@ -12,6 +12,8 @@
 		<script type="text/javascript" src="js/test.js" defer="defer"></script>
 		<script type="text/javascript" src="js/indexPage.js" defer></script>
 		
+		<!--剪贴板-->
+		
 		<!--snow-->
 		<style>
 			body{
@@ -47,13 +49,16 @@
 				<img id="img-logo" alt="loge" src="imgs/MorseForJun.png" />
 			</div>
 			<div id="div-search">
-				<button id="butt-searchM" type="button" onclick="buttSearchOnClickM()">摩斯</button>
+				<button id="butt-searchM" type="button" onclick="buttSearchOnClickM()">M</button>
 				<input id="inp-morse" type="text" autofocus="autofocus" placeholder="这里输入Morse Code哦！" />
-				<button id="butt-searchP" type="button" onclick="buttSearchOnClickP()">拼音</button>
+				<button id="butt-searchP" type="button" onclick="buttSearchOnClickP()">P</button>
 			</div>
 			<div id="div-result">
 				<span>Res:</span>
 				<p id="p-resultShow">翻译结果会出现在这里哦！</p>
+				<button class="btn" data-clipboard-target="#p-resultShow">
+					<img id="img-copy" src="imgs/copyIcon01.svg" alt="Copy to clipboard">
+				</button>		
 			</div>
 			<div id="div-tip">
 				<span>Tips:</span>
@@ -89,6 +94,12 @@
 				});
 		</script>
 		<!--canvas为代码自动生成，在body最后-->
+		
+		<!--剪贴板-->
+		<script type="text/javascript" src="js/clipboard.min.js"></script>
+		<script type="text/javascript">
+			var clipboard = new ClipboardJS('.btn');
+		</script>
 	</body>
 </html>
 
