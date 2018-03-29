@@ -62,7 +62,6 @@ div#div-search button#butt-searchP{
 	height: 88px;
 	font-size: 27px;
 	text-align: center;
-	border-right: none;
 	border-left: none;
 	/*background-color: #9AADBE;*/
 	background-color: #A9BD69;
@@ -79,7 +78,6 @@ div#div-search button#butt-searchM{
 	font-size: 27px;
 	text-align: center;
 	border-right: none;
-	border-left: none;
 	background-color: #A9BD69;
 	border-color: #6F0C45;
 	/*border-radius: 15px 0 0 15px;*/
