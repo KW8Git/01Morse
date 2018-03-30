@@ -21,16 +21,16 @@
 	</head>
 	<body>
 		<header id="header-box"><span>ABCDEFGHIJKlMNOPQRSTUVWXYZ&copy;</span></header>
-		<div id="max-big-box" style="z-index:10;">
+		<div id="max-big-box">
 			<div id="div-logo">
 				<img id="img-logo" alt="logo" src="imgs/MorseForJun.png" />
 			</div>
-			<div id="div-search">
+			<div id="div-search" style="z-index:100;">
 				<button id="butt-searchM" type="button" onclick="buttSearchOnClickM()">摩</button>
 				<input id="inp-morse" type="text" autofocus="autofocus" placeholder="这里输入Morse Code哦！" />
 				<button id="butt-searchP" type="button" onclick="buttSearchOnClickP()">拼</button>
 			</div>
-			<div id="div-result">
+			<div id="div-result" style="z-index:100;">
 				<span>Res:</span>
 				<p id="p-resultShow">翻译结果会出现在这里哦！</p>
 			</div>
