@@ -7,30 +7,41 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Morse</title>
 		
-		<!--蒲公英snow-->
-		<link rel="stylesheet" type="text/css" href="css/snowPugongY.css"/>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		
 		<link rel="stylesheet" href="css/base.css" />
 		<script type="text/javascript" src="js/morseData.js"></script>
 		<script type="text/javascript" src="js/base.js" defer="true"></script>
-		<script type="text/javascript" src="js/test.js" defer="defer"></script>
 		<script type="text/javascript" src="js/indexPage.js" defer></script>
 		
-		
+		<style>
+			/*将canvas蒲公英定位到原点并浮起来到上层*//*设置层级关系*/
+			canvas{
+				position:fixed;
+				top: 0;
+				left: 0;
+				z-index: -2;
+			}
+			header#header-box,div#max-big-box{
+				position: absolute;
+				z-index: 1;
+			}
+		</style>
+		<script src="js/ThreeCanvas.js"></script>
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/Snow.js"></script>
+		<script src="js/snowFall.js"></script>
 	</head>
 	<body>
-		<header id="header-box"><span>ABCDEFGHIJKLMNOPQRSTUVWXYZ&copy;</span></header>
+		<header id="header-box"><span>ABCDEFGHIJKlMNOPQRSTUVWXYZ&copy;</span></header>
 		<div id="max-big-box">
 			<div id="div-logo">
 				<img id="img-logo" alt="logo" src="imgs/MorseForJun.png" />
 			</div>
-			<div id="div-search" style="z-index:100;">
+			<div id="div-search">
 				<button id="butt-searchM" type="button" onclick="buttSearchOnClickM()">摩</button>
 				<input id="inp-morse" type="text" autofocus="autofocus" placeholder="这里输入Morse Code哦！" />
 				<button id="butt-searchP" type="button" onclick="buttSearchOnClickP()">拼</button>
 			</div>
-			<div id="div-result" style="z-index:100;">
+			<div id="div-result">
 				<span>Res:</span>
 				<p id="p-resultShow">翻译结果会出现在这里哦！</p>
 			</div>
@@ -47,10 +58,25 @@
 				</p>
 			</div>
 		</div>
-		<!--canvas-nest-->
-		<!--<script type="text/javascript" color="17,13,41" opacity='0.7' zIndex="-2" count="100" src="js/canvas-nest.min.js"></script>-->
-		<!--蒲公英snow-->
-		<div class="snow-container"></div>
-  		<script type="text/javascript" src="js/all.js"></script>
+		<!--蒲公英snow-->、
+		<script>
+			$.snowFall({
+				//创建粒子数量，密度
+				particleNo: 10,
+				//粒子下拉速度
+				particleSpeed:50,
+				//粒子在垂直（Y轴）方向运动范围
+				particleY_Range:1300,
+				//粒子在垂直（X轴）方向运动范围
+				particleX_Range:1000,
+				//是否绑定鼠标事件
+			    bindMouse: false,
+			    //相机离Z轴原点距离
+			    zIndex:800,
+			  //摄像机视野角度
+			    angle:55,
+			    wind_weight:2
+				});
+		</script>
 	</body>
 </html>
